@@ -1,10 +1,9 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes">
 
-  <!-- <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"> -->
   <link rel="stylesheet" href="style.css">
-
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
     crossorigin=""/>
@@ -13,56 +12,54 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
     crossorigin=""></script>
-  
-  <title>IP Address Tracker</title>
 
+
+  <title>IP Address Tracker</title>
 </head>
 <body>
 
-  <div class="ip-container">
+  <div class="container">
 
-    <p class="ip-title">IP Address Tracker</p>
-    
-    <div class="user-input">
-      <input class="user-ip-address" type="text" id="fname" name="fname" placeholder="Search for any IP address or domain"><br>
-      <button class="user-search-button"> <img src="./images/icon-arrow.svg" alt="" srcset=""> </button>
+    <div class="upper">
+      
+      <p class="ip-address-title">IP Address Tracker</p>
+
+      <div class="ip-address-input">
+        <input type="text" name="" id="user-ip-address" placeholder="Search for any IP address or domain">
+        <button id="search-button"> <img src="/images/icon-arrow.svg" alt="" srcset=""> </button>
+      </div>
+
+      <div class="middle">
+
+        <div class="ip-address-details">
+          <p class="header ip-address-header">IP Address</p>
+          <p class="sub ip-address">102.218.217.240</p>
+        </div>
+  
+        <div class="ip-location-details">
+          <p class="header ip-location-header">Location</p>
+          <p class="sub ip-location">Cape Town, WC 7441</p>
+        </div>
+  
+        <div class="ip-timezone-details">
+          <p class="header ip-timezone-header">Timezone</p>
+          <p class="sub ip-timezone">UTC+02:00</p>
+        </div>
+  
+        <div class="ip-isp-details">
+          <p class="header ip-isp-header">ISP</p>
+          <p class="sub ip-isp">Home-Connect</p>
+        </div>
+  
+      </div>
+
+    </div>
+
+    <div class="lower">
+      <div id="map"> </div>
     </div>
 
   </div>
-
-  <div class="ip-details">
-
-    <div class="ip-address-details">
-      <p class="ip-address-title ip-header">IP Address</p>
-      <p class="ip-address ip-sub"> 192.212.174.101 </p>
-    </div>
-
-    <hr class="solid">
-
-    <div class="ip-location-details">
-      <p class="ip-location-title ip-header">Location</p>
-      <p class="ip-location ip-sub"> Brooklyn, NY 10001 </p>
-    </div>
-
-    <hr class="solid">
-
-    <div class="ip-timezone-details">
-      <p class="ip-timezone-title ip-header">Timezone</p>
-      <p class="ip-timezone ip-sub"> UTC-05:00</p>
-    </div>
-
-    <hr class="solid">
-
-    <div class="ip-isp-details">
-      <p class="ip-isp-title ip-header">ISP</p>
-      <p class="ip-isp ip-sub"> SpaceX Starlink </p>
-    </div>
-
-  </div>
-
-  <div class="map-container">
-    <div id="map"></div>
-  </div>
-
+  
 </body>
 </html>
